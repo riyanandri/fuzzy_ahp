@@ -13,6 +13,16 @@
 <script src="<?= base_url('assets/js/page/index.js'); ?>"></script>
 <!-- ======= -->
 <script src="<?= base_url('assets/js/main.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/sweetalert2/dist/sweetalert2.all.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/sweetalert2/dist/sweetalert2.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/script.js'); ?>"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+	function deleteConfirm(url) {
+		$('#btn-delete').attr('href', url);
+		$('#deleteModal').modal();
+	}
+</script>
 <script>
 	Main.init()
 </script>

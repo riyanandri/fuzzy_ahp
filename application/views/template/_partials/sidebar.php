@@ -1,7 +1,3 @@
-<?php $pag = $this->uri->segment(1); ?>
-<?php $page = $this->uri->segment(2); ?>
-<?php $pages = $this->uri->segment(3); ?>
-
 <nav class="main-sidebar ps-menu">
 	<div class="sidebar-toggle action-toggle">
 		<a href="#">
@@ -21,19 +17,31 @@
 	</div>
 	<div class="sidebar-content">
 		<ul>
-			<li <?php if ($page == "Dashboard") echo 'class="active" '; ?>>
-				<?= anchor('Dashboard', '<i class="ti-home"></i><span>Dashboard</span>'); ?>
-				<!-- <a href="" class="link">
+			<li <?php if ($this->uri->segment(1) == "dashboard") {
+					echo 'class="active"';
+				} ?>>
+				<a href="<?php echo base_url(); ?>dashboard" class="link">
 					<i class="ti-home"></i>
 					<span>Dashboard</span>
-				</a> -->
+				</a>
 			</li>
-			<li class="">
-				<a href="index.html" class="link">
+			<li <?php if ($this->uri->segment(1) == "kriteria") {
+					echo 'class="active"';
+				} ?>>
+				<a href="<?php echo base_url(); ?>kriteria" class="link">
 					<i class="ti-home"></i>
 					<span>Kriteria</span>
 				</a>
 			</li>
+			<li <?php if ($this->uri->segment(1) == "alternatif") {
+					echo 'class="active"';
+				} ?>>
+				<a href="<?php echo base_url(); ?>alternatif" class="link">
+					<i class="ti-home"></i>
+					<span>Alternatif</span>
+				</a>
+			</li>
+
 			<!-- <li>
 				<a href="#" class="main-menu has-dropdown">
 					<i class="ti-desktop"></i>
